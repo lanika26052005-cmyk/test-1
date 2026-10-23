@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8f0;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 { color: #e65100; }
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .food {
+            background: blue;
+            padding: 20px;
+            border-radius: 12px;
+            width: 180px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+        button {
+            background: #e65100;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> Food Ordering App</h1>
+    <p>Fresh food, delivered with love!</p>
+
+    <div class="menu">
+        {% for food in foods %}
+        <div class="food">
+            <h2>{{ food.name }}</h2>
+            <p>₹{{ food.price }}</p>
+            <button onclick="alert('You selected {{ food.name }}!')">
+                Order Now
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8f0;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 { color: #e65100; }
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .food {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 180px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+        button {
+            background: #e65100;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> Food Ordering App</h1>
+    <p>Fresh food, delivered with love!</p>
+
+    <div class="menu">
+        {% for food in foods %}
+        <div class="food">
+            <h2>{{ food.name }}</h2>
+            <p>₹{{ food.price }}</p>
+            <button onclick="alert('You selected {{ food.name }}!')">
+                Order Now
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
